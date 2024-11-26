@@ -12,7 +12,7 @@ This will also create a new main branch.)
 
 3.Add to stage
 
-(Adds a change in the working directory to the staging area.)
+(Adds a change in the working directory to the staging area. git add ., git add <filename>)
 
 4.Commit to local repo.
 
@@ -23,6 +23,13 @@ interact with the remote repository. Until they're pushed, commits exist only on
 
 ( push command is used to upload local repository content to a remote repository.
  Pushing is how you transfer commits from your local repository to a remote repo.)
+
+
+ 6.Create branches to isolate work from the main project. This way, you can experiment or make changes without affecting the main codebase.
+
+ 7. Merging combines changes from one branch into another. Typically, you'll merge your new branch back into main after the work is completed.
+
+ 
 -->
 
 <!DOCTYPE html>
@@ -40,7 +47,10 @@ interact with the remote repository. Until they're pushed, commits exist only on
       code repositories using Git. It allows developers to manage version
       control, collaborate with others, and deploy code seamlessly.
     </p>
-    <h2>Steps to Initialize, Add, Commit, and Push Code</h2>
+    <h2>
+      Steps to Initialize, Add, Commit, Push Code, and Making and Merging
+      Branches
+    </h2>
     <ol>
       <li>
         <strong>Initialize a Git repository:</strong>
@@ -49,6 +59,14 @@ interact with the remote repository. Until they're pushed, commits exist only on
         repository in your project folder.
         <br />
         <code>git init</code>
+      </li>
+      <li></li>
+        <strong>Make a new branch:</strong>
+        <br />
+        Use <code class="command">git checkout-b (branch name)
+        </code> to create a new branch.
+        <br />
+        <code> git checkout-b (branch name) </code>
       </li>
       <li>
         <strong>Add files to staging:</strong>
@@ -67,6 +85,21 @@ interact with the remote repository. Until they're pushed, commits exist only on
         <code>git commit -m "Your commit message here"</code>
       </li>
       <li>
+        <strong>Switch Branches:</strong>
+        <br/>
+        Use <code class="command">git checkout (branch name) <branch-name>
+        </code> to switch branches.
+        <br />
+        <code> git checkout (branch name) </code>
+      </li>
+      <li>
+        <strong>Merge branches:</strong>
+        <br />
+        Use <code class="command">git merge (branch name)</code> to merge the branches.
+        <br />
+        <code>git merge (branch name) </code>
+      </li>
+      <li>
         <strong>Push changes to a remote repository:</strong>
         <br />
         Add a remote repository (if not already added) using:
@@ -80,14 +113,20 @@ interact with the remote repository. Until they're pushed, commits exist only on
         <br />
         <code>git push -u origin main</code>
       </li>
+      
     </ol>
     <h2>Example Workflow</h2>
     <pre>
 git init
+git checkout-b (branch name)
 git add .
 git commit -m "Initial commit"
 git remote add origin https://github.com/username/my-project.git
+git checkout (branch name)
+git merge (branch name)
 git push -u origin main
+
+
     </pre>
   </body>
 </html>
